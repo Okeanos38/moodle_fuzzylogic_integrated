@@ -1,0 +1,1 @@
+a:5:{s:8:"maxbytes";s:50:"Maksimum yüklenebilen dosya büyüklüğü (byte)";s:13:"maxbytes_desc";s:56:"Sıfır olursa varsayılan olarak sınırsız set edilir";s:10:"pluginname";s:12:"Metin alanı";s:14:"fieldtypelabel";s:17:"Uzun metin alanı";s:16:"privacy:metadata";s:98:"The Textarea field component does not store any personal data, it uses tables defined in mod_data.";}

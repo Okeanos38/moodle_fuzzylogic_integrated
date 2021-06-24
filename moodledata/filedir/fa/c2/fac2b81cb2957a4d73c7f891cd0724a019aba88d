@@ -1,0 +1,13 @@
+<!-- Fuzzy Vikor -->
+
+<iframe src="/bulanik/bulanik/vikor" onload='boyutlama();' scrolling='no' id='iframe' frameborder='0' style='width:100%; min-height:1000px;' marginheight='0' marginwidth='0'></iframe>
+
+
+<script>
+
+function boyutlama()
+{
+var yukseklik=document.getElementById('iframe').contentWindow.document.body.scrollHeight;
+document.getElementById('iframe').height=yukseklik;
+}
+</script>

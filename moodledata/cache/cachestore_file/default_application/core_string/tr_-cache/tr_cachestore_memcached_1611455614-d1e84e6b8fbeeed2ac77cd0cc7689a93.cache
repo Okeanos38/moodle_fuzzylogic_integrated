@@ -1,0 +1,33 @@
+a:40:{s:12:"bufferwrites";s:21:"Arabellek yazılıyor";s:17:"bufferwrites_help";s:449:"Arabelleğe alınmış I/O'i etkinleştirir veya devre dışı bırakır. Arabelleğe alınmış I/O'i etkinleştirmek, depolama komutlarının gönderilmek yerine "arabelleğe" dönüştürülmesine neden olur. Veri alırken yapılan herhangi bir işlem bu arabelleğin uzaktaki bağlantıya gönderilmesine neden olur. Bağlantıyı kesmek veya bağlantıyı kapatmak, arabelleğe alınan verilerin uzak bağlantıya yönlendirilmesine neden olur.";s:9:"clustered";s:37:"Kümelenmiş sunucuları etkinleştir";s:14:"clustered_help";s:516:"Bu, salt okunur, ayar-çoklu işlevsellik sağlamak için kullanılır.
+
+Amaçlanan kullanım durumu, yük dengeli yapılandırmalar için geliştirilmiş bir depo oluşturmaktır. Mağaza bir sunucudan (genellikle localhost) alınır, ancak birçoğuna (yük dengeleme havuzundaki tüm sunuculara) ayarlanır. Çok yüksek okuma oranlarına sahip önbellekler için, bu, ağ yükü miktarını önemli ölçüde azaltır.
+
+Bu ayar etkinleştirildiğinde, getirme için yukarıda listelenen sunucu kullanılacaktır.";s:15:"clusteredheader";s:22:"Bölünmüş sunucular";s:4:"hash";s:23:"Hash(Çırpı) yöntemi";s:9:"hash_help";s:189:"Öğe tuşları için kullanılan karma algoritmasını belirtir. Her karma algoritmanın avantajları ve dezavantajları vardır. Bilmiyorsanız veya önemsemiyorsanız varsayılana gidin.";s:12:"hash_default";s:25:"Varsayılan (birer birer)";s:8:"hash_md5";s:3:"MD5";s:8:"hash_crc";s:3:"CRC";s:12:"hash_fnv1_64";s:7:"FNV1_64";s:13:"hash_fnv1a_64";s:8:"FNV1A_64";s:12:"hash_fnv1_32";s:7:"FNV1_32";s:13:"hash_fnv1a_32";s:8:"FNV1A_32";s:10:"hash_hsieh";s:5:"Hsieh";s:11:"hash_murmur";s:6:"Murmur";s:8:"isshared";s:22:"Paylaşılan önbellek";s:13:"isshared_help";s:643:"Memcached sunucunuz diğer uygulamalar tarafından da kullanılıyor mu?
+
+Önbellek diğer uygulamalar tarafından paylaşılırsa, yalnızca bu uygulamanın sahip olduğu verilerin temizlendiğinden (harici uygulama önbellek verilerini değiştirmeden) her anahtar ayrı ayrı silinir. Bu, sunucu yapılandırmanıza bağlı olarak önbellek temizlenirken performansın düşmesine neden olabilir.
+
+Bu uygulama için özel bir önbellek kullanıyorsanız, başka bir uygulamanın önbellek verilerini yok etme riski olmadan tüm önbellek güvenli bir şekilde silinebilir. Bu, önbellek temizlenirken artan performans ile sonuçlanacaktır.";s:10:"pluginname";s:9:"Memcached";s:26:"privacy:metadata:memcached";s:164:"The Memcached cachestore plugin stores data briefly as part of its caching functionality. This data is stored on an Memcache server where data is regularly removed.";s:31:"privacy:metadata:memcached:data";s:36:"The various data stored in the cache";s:6:"prefix";s:15:"Önek anahtarı";s:11:"prefix_help";s:283:"Bu, öğe anahtarlarınız için bir "etki alanı" yaratmak için kullanılabilir ve bu da tek bir memcached kurulumda birden çok memcached mağaza oluşturmanıza olanak tanır. Anahtar uzunluğu sorunlarının ortaya çıkmadığından emin olmak için 16 karakterden uzun olamaz.";s:13:"prefixinvalid";s:56:"Geçersiz önek. Sadece a-z A-Z 0-9-_ kullanabilirsiniz.";s:19:"serialiser_igbinary";s:24:"igbinary serileştirici.";s:15:"serialiser_json";s:22:"JSON serileştiricisi.";s:14:"serialiser_php";s:31:"Varsayılan PHP serileştirici.";s:7:"servers";s:9:"Sunucular";s:12:"servers_help";s:670:"Bu, bu memcached bağdaştırıcı tarafından kullanılması gereken sunucuları ayarlar.
+Sunucular her satıra bir tane olacak şekilde tanımlanmalı ve bir sunucu adresi ve isteğe bağlı olarak bir bağlantı noktası ve ağırlıktan oluşmalıdır.
+Hiçbir bağlantı noktası sağlanmazsa varsayılan bağlantı noktası (11211) kullanılır.
+
+Örneğin:
+<pre>
+Sunucu.url.com
+Ipaddress: bağlantı noktası
+Sunucuadı: port: ağırlık
+</ pre>
+
+Aşağıda * Kümelenmiş sunucuları etkinleştir * etkinleştirilmişse, burada yalnızca bir sunucu listelenmelidir. Bu genelde 127.0.0.1 veya localhost gibi yerel makineye her zaman çözüm olan bir isim olurdu.";s:21:"serversclusterinvalid";s:63:"Kümeleme etkinleştirildiğinde tam olarak bir sunucu gerekir.";s:10:"setservers";s:18:"Sunucuları ayarla";s:15:"setservers_help";s:537:"Önbellekte veriler değiştirildiğinde güncellenecek sunucular listesi. Genellikle, havuzdaki her sunucunun tam nitelikli adı.
+** ** farklı bir sunucu adı olsa bile, * Sunucular * 'da listelenen sunucuyu içermelidir **.
+Sunucular her satıra bir tane olmak üzere tanımlanmalı ve bir sunucu adresi ve isteğe bağlı olarak bir bağlantı noktası içermelidir.
+Hiçbir bağlantı noktası sağlanmazsa varsayılan bağlantı noktası (11211) kullanılır.
+
+Örneğin:
+<pre>
+Sunucu.url.com
+Ipaddress: bağlantı noktası
+</ pre>";s:22:"sessionhandlerconflict";s:198:"Uyarı: Bir memcached örneği ({$a}) aynı memcached sunucuyu oturumlarla kullanmak üzere yapılandırılmıştır. Tüm önbelleklerin temizlenmesi oturumların da temizlenmesine yol açacaktır.";s:11:"testservers";s:19:"Sunucuları test et";s:16:"testservers_desc";s:264:"Memcached sunucuların karşı karşıya kalacağı bir veya daha fazla bağlantı dizesi. Bir sınama sunucusu belirtilmişse, memcached performans, yönetim bloğundaki önbellek performansı sayfasını kullanarak test edilebilir.
+Örnek olarak: 127.0.0.1.11211";s:14:"usecompression";s:24:"Sıkıştırmayı kullan";s:19:"usecompression_help";s:273:"Yük sıkıştırmasını etkinleştirir veya devre dışı bırak. Etkinleştirildiğinde, belirli bir eşikten (şu anda 100 bayttan) daha uzun öğe değerleri, saklama sırasında sıkıştırılacak ve alma esnasında şeffaf bir şekilde arşivden çıkarılacaktır.";s:13:"useserialiser";s:25:"Seri hale getirici kullan";s:18:"useserialiser_help";s:350:"Çarpık olmayan değerleri seri hale getirmek için kullanılacak seri düzenleyiciyi belirtir.
+Geçerli seri hale getiriciler Memcached :: SERIALIZER_PHP veya Memcached :: SERIALIZER_IGBINARY'dir.
+İkincisi yalnızca memcached, --enable-memcached-igbinary seçeneği ile yapılandırıldığında ve igbinary uzantısı yüklendiğinde desteklenir.";s:21:"upgrade200recommended";s:429:"Memcached PHP uzantınızı 2.0.0 veya daha yeni sürüme yükseltmenizi öneririz.
+Şu anda kullandığınız Memcached PHP uzantısının sürümü, Moodle'ın bir sandboxed önbellek sağlamak için kullandığı işlevselliği sağlamıyor. Yükseltene dek, Moodle'ın kullanacağı şekilde yapılandırılmış olan aynı Memcached sunucularını kullanacak başka herhangi bir uygulamayı yapılandırmamanızı öneririz.";}
